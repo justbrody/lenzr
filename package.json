@@ -27,8 +27,8 @@
     "rollup-plugin-uglify": "^6.0.2"
   },
   "scripts": {
-    "test": "BABEL_ENV=test jest",
-    "build": "BABEL_ENV=build rollup --config"
+    "test": "jest",
+    "build": "BABEL_ENV=prod rollup --config"
   },
   "jest": {
     "setupFiles": [
