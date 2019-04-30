@@ -13,8 +13,7 @@ Global state for React using lenses.
 Full example:
 ```javascript
 import React from 'react'
-import lenzr from 'lenzr'
-import { lensProp } from 'ramda'
+import lenzr, { lensProp } from 'lenzr'
 
 const { withGlobalStore, connect } = lenzr({
   token: 'asdfd',
