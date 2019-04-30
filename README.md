@@ -15,18 +15,12 @@ Full example:
 import React from 'react'
 import lenzr, { lensProp } from 'lenzr'
 
-const { withGlobalStore, connect } = lenzr({
-  token: 'asdfd',
-  count: 10
-})
+const { withGlobalStore, connect } = lenzr({ count: 10 })
 
 const countLens = lensProp('count')
 
-const Counter = ({ count, set }) => {
-  expect(count).toBe(10)
-
-  return <div onClick={() => set(countLens, count + 1)}>{count}</div>
-}
+const Counter = ({ count, set }) =>
+  <div onClick={() => set(countLens, count + 1)}>{count}</div>
 
 const ConnectedCounter = connect({ count: countLens })(Counter)
 
