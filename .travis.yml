@@ -1,7 +1,16 @@
 language: node_js
 cache: npm
 node_js:
-  - "10"
+- '10'
 after_success:
-  - npm run build
-  - npm run coveralls
+- npm run build
+- npm run coveralls
+deploy:
+  provider: npm
+  email: justbrody@gmail.com
+  api_key:
+    secure: g54jLZirThitimQHsxl5phB7TYUbHO+OjrxXcrUi0fKY0S3W4cyOva0xwrr4rydP+o6T9RuFu1ng/feERbbnVkTCMPsRZzCAEOdcRLqc5M5IqnaR9Gh3IzZuW9cWbz+Q3K02HgxXdQ8HSYu0X5vdALyWkME3DrmADW4jOD43bPmR3IaOOb3bkXqcodlaRmR+JFXSBSyemeL+2xt/gQuIgP8uT/u85u106yTsY1NnWUOju6zTquDuoxXDkakp36QPdM58H0LI/gsnBy47d5o7O/N42XJ7eFluM9gYQmMqS9bg+kAHPt9n7uv+Bx+d8R8izrKF62gFGcABPTcCpZhnmDTVFQSWarClilIoB3zqkJiWyqec6NkEj8FEetunLJ0jp1ydreB+S9IUtn2W5D1KBXqlP/OM8YOkfqWK6Ve0rCqPcTKeDCsoN6WCuihwrI6AeuT661OmYscPiNfko2vfj9yL0cb09V7MPybYqCpmPDjtavKuXBpIOC7J6+hkSK8+2v/XXXP/vu9NKaAay7IMCLbjVlun5sJ/uokRDQAygyuweeEBbKyrfP9FBZJHbCELv0l9ISTcxE2chDVY5hcDQJkvKROOp4hVlmw35SM2Z3flxuO94eVPmf1gZZ5xgbxJvm2TEdgJMhhs/wl/uKR+yzee/TFOADKqnpR5QBZzeXE=
+  on:
+    tags: true
+    repo: justbrody/lenzr
+    branch: master
