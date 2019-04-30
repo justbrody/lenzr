@@ -13,6 +13,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-jest": "^24.7.1",
+    "coveralls": "^3.0.3",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "hoist-non-react-statics": "^3.3.0",
@@ -28,6 +29,7 @@
   },
   "scripts": {
     "test": "jest",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "build": "BABEL_ENV=prod rollup --config"
   },
   "jest": {
