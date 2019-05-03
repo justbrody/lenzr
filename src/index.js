@@ -1,4 +1,8 @@
 import createGlobalStore from './createGlobalStore'
-export { lens, lensProp, lensPath } from 'ramda'
+import { lens, lensProp, lensPath } from 'ramda'
+
+export lens
+export lensProp
+export lensPath
 
 export default createGlobalStore
