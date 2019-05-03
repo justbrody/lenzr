@@ -8,6 +8,8 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/min/lenzr@latest.svg)
 ![David](https://img.shields.io/david/dev/justbrody/lenzr.svg)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/justbrody/lenzr/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/justbrody/lenzr/?branch=master)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 
 Global state for React using lenses.
 
