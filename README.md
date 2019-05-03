@@ -6,7 +6,7 @@
 [![Top languages](https://img.shields.io/github/languages/top/justbrody/lenzr.svg)](https://github.com/justbrody/lenzr/)
 [![Known Vulnerabilities](https://snyk.io/test/github/justbrody/lenzr/badge.svg?targetFile=package.json)](https://snyk.io/test/github/justbrody/lenzr?targetFile=package.json)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/lenzr@latest.svg)
-![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/lenzr.svg)
+![David](https://img.shields.io/david/dev/justbrody/lenzr.svg)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/justbrody/lenzr/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/justbrody/lenzr/?branch=master)
 
 Global state for React using lenses.
