@@ -1,14 +1,13 @@
 /* eslint-env jest */
 import React from 'react'
 import getDisplayName from './getDisplayName'
+const WeirdComponent = () => <div />
 
 it('Get the display name of a named component', () => {
-  const WeirdComponent = () => <div />
   expect(getDisplayName(WeirdComponent)).toBe('WeirdComponent')
 })
 
 it('Get the display name when explicitly set', () => {
-  const WeirdComponent = () => <div />
   WeirdComponent.displayName = 'Weird Comp'
   expect(getDisplayName(WeirdComponent)).toBe('Weird Comp')
 })
