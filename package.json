@@ -1,7 +1,7 @@
 {
   "name": "lenzr",
   "version": "0.2.3",
-  "description": State management for React using lenses.",
+  "description": "State management for React using lenses.",
   "main": "dest/index.js",
   "dependencies": {},
   "peerDependencies": {
