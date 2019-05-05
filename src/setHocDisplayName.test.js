@@ -3,23 +3,25 @@ import React from 'react'
 import setHocDisplayName from './setHocDisplayName'
 import getDisplayName from './getDisplayName'
 
-it('Set HOC name for HOC`ed component', () => {
-  const WeirdComponent = () => <div />
+const WeirdComponent = () => {
+  return <div />
+}
 
+it('Set HOC name for HOC`ed component', () => {
   const WithHocWeirdComp = setHocDisplayName('HOC', WeirdComponent)(
     WeirdComponent
   )
 
   expect(getDisplayName(WithHocWeirdComp)).toBe('HOC(WeirdComponent)')
 })
+
+const ComponentB = () => <div />
+
 it('Set HOC name for HOC`ed component', () => {
   const withId = Component => () => <Component id={1} />
-  const WeirdComponent = () => <div />
-  const WeirdComponentWithID = withId(WeirdComponent)
+  const ComponentBWithID = withId(ComponentB)
 
-  const WithHocWeirdComp = setHocDisplayName('HOC', WeirdComponent)(
-    WeirdComponentWithID
-  )
+  const WithHocCompB = setHocDisplayName('HOC', ComponentB)(ComponentBWithID)
 
-  expect(getDisplayName(WithHocWeirdComp)).toBe('HOC(WeirdComponent)')
+  expect(getDisplayName(WithHocCompB)).toBe('HOC(ComponentB)')
 })
