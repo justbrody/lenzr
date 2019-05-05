@@ -4,7 +4,7 @@ import { lensProp } from 'ramda'
 import { mount } from 'enzyme'
 import { createConnect } from './createConnect'
 
-const Counter = ({ count }) => <div>{count}</div>
+const Counter = ({ count }) => <div>count: {count}</div>
 
 it('Can connect to a React context', () => {
   const Ctx = React.createContext()
