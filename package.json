@@ -1,7 +1,7 @@
 {
   "name": "lenzr",
   "version": "0.2.3",
-  "description": "Global state for React using lenses.",
+  "description": State management for React using lenses.",
   "main": "dest/index.js",
   "dependencies": {},
   "peerDependencies": {
@@ -46,9 +46,13 @@
   },
   "keywords": [
     "React",
-    "global",
+    "global state",
     "state",
-    "lenses"
+    "lenses",
+    "ramda",
+    "lens",
+    "functional programming",
+    "state management"
   ],
   "author": "Christiaan Braad",
   "license": "MIT",
