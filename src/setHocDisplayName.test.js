@@ -3,7 +3,9 @@ import React from 'react'
 import setHocDisplayName from './setHocDisplayName'
 import getDisplayName from './getDisplayName'
 
-const WeirdComponent = () => <div />
+const WeirdComponent = () => {
+  return <div />
+}
 
 it('Set HOC name for HOC`ed component', () => {
   const WithHocWeirdComp = setHocDisplayName('HOC', WeirdComponent)(
