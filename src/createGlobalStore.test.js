@@ -9,7 +9,7 @@ it('Can create a global store and connect to it', () => {
   const Counter = ({ count }) => {
     expect(count).toBe(10)
 
-    return <div>{count} </div>
+    return <div> {count} </div>
   }
   const ConnectedCounter = connect({ count: lensProp('count') })(Counter)
 
