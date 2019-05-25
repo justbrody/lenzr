@@ -5,3 +5,4 @@ rollup.config.js
 .babelrc
 .gitignore
 coverage
+.github
