@@ -18,15 +18,22 @@ Full example:
 import React from 'react'
 import lenzr, { lensProp } from 'lenzr'
 
+// First we will set up a new store.
 const { withGlobalStore, connect } = lenzr({ count: 10 })
 
+// Create a lens for accessing the count data in the store.
 const countLens = lensProp('count')
 
+// A simple component with the count value and a set function to manipulate the store.
 const Counter = ({ count, set }) =>
   <div onClick={() => set(countLens, count + 1)}>{count}</div>
 
+// Connect the component to the global store 
+// It will provide functions to access the store (set/over/view)
+// And will map data from the store throught a lens to props
 const ConnectedCounter = connect({ count: countLens })(Counter)
 
+// The App with a HOC to provide the global store.
 const App = withGlobalStore(() => (
   <div>
     <h1>Counter</h1>
