@@ -7,7 +7,8 @@ export default {
   input: 'src/index.js',
   output: {
     file: 'dest/index.js',
-    format: 'cjs'
+    format: 'cjs',
+    exports: 'named'
   },
   plugins: [
     resolve(),
@@ -20,5 +21,5 @@ export default {
       exclude: 'node_modules/**' // only transpile our source code
     })
   ],
-  external: ['react', 'ramda']
+  external: ['react']
 }
