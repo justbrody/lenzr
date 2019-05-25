@@ -41,3 +41,32 @@ const App = withGlobalStore(() => (
   </div>
 ))
 ```
+
+## Store operation view/set/over
+
+### Over
+```javascript
+const IncButton = connnect()(({ over }) => {
+  const inc = () => over(countLens, x => x + 1)
+  
+  return <button onClick={inc}>Increment</button>
+})
+```
+
+### Set
+```javascript
+const ResetButton = connnect()(({ set }) => {
+  const reset = () => set(countLens, 0)
+  
+  return <button onClick={reset}>Reset</button>
+})
+```
+
+### View
+```javascript
+const Counter = connnect()(({ view }) => {
+  const count = view(countLens)
+  
+  return <div>{count}</di>v
+})
+```
