@@ -13,7 +13,7 @@
 
 Global store for React using lenses.
 
-Full example:
+## TL;DR Full example
 ```javascript
 import React from 'react'
 import lenzr, { lensProp } from 'lenzr'
