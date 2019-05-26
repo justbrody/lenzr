@@ -1,6 +1,6 @@
 {
   "name": "lenzr",
-  "version": "0.2.7",
+  "version": "1.0.0",
   "description": "State management for React using lenses.",
   "main": "dest/index.js",
   "dependencies": {},
