@@ -11,9 +11,9 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
-Global state for React using lenses.
+Global store for React using lenses.
 
-Full example:
+## TL;DR Full example
 ```javascript
 import React from 'react'
 import lenzr, { lensProp } from 'lenzr'
@@ -40,4 +40,56 @@ const App = withGlobalStore(() => (
     <ConnectedCounter />
   </div>
 ))
+```
+## Lenzr API
+The lenzr function will return an object with the following functions:
+ * withGlobalStore: HOC for making the store available for other components.
+ * connect: HOC for connection other components to the store.
+ * useLensGlobalStore: React Hook with contains functions to operate on the store
+
+
+## Store operation set/view/over
+Both the connect and useLensGlobalStore exposes functions which can be used to operate on the store.
+
+```javascript
+const ConnectedApp = connect()(
+  ({set, over, view}) => { 
+    ... 
+})
+const AppWithHook = () => {
+  const {set, over, view} = useLensGlobalStore()
+  ...
+}
+```
+**Important note: 'useLensGlobalStore' will always cause a re-render of the component if the store has changed.**
+**If the return value is very expensive, you could wrap it with React.useMemo.**
+### Set
+With the 'set' function a specific value can be changed or added in the store, using the given lens.
+```javascript
+const ResetButton = connnect()(({ set }) => {
+  const reset = () => set(countLens, 0)
+  
+  return <button onClick={reset}>Reset</button>
+})
+```
+
+### Over
+Also with the 'over' function can the value be changed in the store, but instead of a value, a function is given.
+This function accepts the old value and needs to return the new value.
+```javascript
+const IncButton = connnect()(({ over }) => {
+  const inc = () => over(countLens, x => x + 1)
+  
+  return <button onClick={inc}>Increment</button>
+})
+```
+
+### View
+With the 'view' function a value in the store can be viewed, it needs a lens to read it from the store.
+```javascript
+const Counter = connnect()(({ view }) => {
+  const count = view(countLens)
+  
+  return <div>{count}</di>v
+})
 ```
