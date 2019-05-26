@@ -51,8 +51,6 @@ The lenzr function will return an object with the following functions:
 ## Store operation set/view/over
 Both the connect and useLensGlobalStore exposes functions which can be used to operate on the store.
 
-**Important note: 'useLensGlobalStore' will always cause a re-render of the component if the store has changed.**
-**If the return value is very expensive, you could wrap it with React.useMemo.**
 ```javascript
 const ConnectedApp = connect()(
   ({set, over, view}) => { 
@@ -63,6 +61,8 @@ const AppWithHook = () => {
   ...
 }
 ```
+**Important note: 'useLensGlobalStore' will always cause a re-render of the component if the store has changed.**
+**If the return value is very expensive, you could wrap it with React.useMemo.**
 ### Set
 With the 'set' function a specific value can be changed or added in the store, using the given lens.
 ```javascript
