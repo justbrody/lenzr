@@ -28,7 +28,7 @@ const countLens = lensProp('count')
 const Counter = ({ count, set }) =>
   <div onClick={() => set(countLens, count + 1)}>{count}</div>
 
-// Connect the component to the global store 
+// Connect the component to the global store.
 // It will provide functions to access the store (set/over/view)
 // And will map data from the store throught a lens to props
 const ConnectedCounter = connect({ count: countLens })(Counter)
