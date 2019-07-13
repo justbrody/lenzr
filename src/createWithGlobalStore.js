@@ -29,6 +29,7 @@ export const createWithGlobalStore = curry(
         }
         this.state = { store }
       }
+
       render () {
         return (
           <GlobalStoreContext.Provider value={this.state.store}>
